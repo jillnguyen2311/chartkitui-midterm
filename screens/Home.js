@@ -1,6 +1,6 @@
 import { StyleSheet, View, ScrollView, Button } from 'react-native';
 import * as React from 'react';
-import { Avatar, Card, Text, List, Divider, Icon } from 'react-native-paper';
+import { Avatar, Card, Text, List, Divider } from 'react-native-paper';
 
 export default function Home({ navigation }) {
     const LeftContent = props => <Avatar.Icon {...props} icon="store" />
@@ -12,7 +12,7 @@ export default function Home({ navigation }) {
         <ScrollView>
             <View style={styles.container}>
                 <View>
-                    <Text variant="displaySmall" style={styles.titlebig}>RETAIL TRADE E-COMMERCE</Text>
+                    <Text variant="displayMedium" style={styles.titlebig}>RETAIL TRADE E-COMMERCE</Text>
                     <Text style={styles.titlesmall}>Revolutionizing the way we shop</Text>
                     <Text variant="bodyLarge" style={styles.description}>
                         Retail trade e-commerce, the digital evolution of traditional retail, has emerged as a game-changer in the world of commerce. This transformative phenomenon involves the buying and selling of products and services online, allowing consumers to make purchases from the comfort of their homes or on the go, with just a few clicks. In recent years, it has gained unprecedented momentum, reshaping the retail landscape, and impacting the way we shop, businesses operate, and the global economy functions.
@@ -23,7 +23,6 @@ export default function Home({ navigation }) {
                             <List.Accordion
                                 title="Why it's important?"
                                 left={props => <Avatar.Icon {...props} icon="help" color='white' />}
-                                expanded={expanded}
                                 onPress={handlePress}>
                                 <Divider />
                                 <List.Item title="Shop anytime, anywhere." />
@@ -57,7 +56,7 @@ export default function Home({ navigation }) {
                 </View>
 
                 <View style={styles.box}>
-                    <Text style={styles.subtitle}>TO EXPLORE MORE</Text>
+                    <Text style={styles.cta}>TO EXPLORE MORE</Text>
                     <Button
                         title="Go to data page"
                         onPress={() => navigation.push('Data')}
@@ -80,21 +79,24 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 10,
         marginBottom: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        color:'#702963'
     },
     titlesmall: {
         fontSize: 22,
         fontWeight: 'bold',
         marginBottom: 50,
-        textAlign: 'center'
+        textAlign: 'center',
+        color:'#702963'
     },
-    subtitle: {
+    cta: {
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 10,
     },
     description: {
-        textAlign: 'justify',
+        textAlign: "justify",
+        marginBottom: 10
     },
     accordion: {
         marginBottom: 40

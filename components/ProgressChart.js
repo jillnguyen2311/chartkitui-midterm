@@ -1,6 +1,5 @@
-import { View, Dimensions, ScrollView } from "react-native";
+import { View, Dimensions } from "react-native";
 import { ProgressChart } from "react-native-chart-kit";
-import { Text } from 'react-native-paper';
 
 export default function Progress() {
 
@@ -8,12 +7,12 @@ export default function Progress() {
 
     const chartConfig = {
         backgroundColor: "#ffffff",
-        backgroundGradientFrom: "white",
+        backgroundGradientFrom: "#ffffff",
         backgroundGradientTo: "#fafafa",
         decimalPlaces: 4,
         fromZero: true,
         formatYLabel: (value) => value.toFixed(4) + "%",
-        color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+        color: (opacity = 1) => `rgba(170, 152, 169, ${opacity})`,
         labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
         strokeWidth: 2,
         barRadius: 5,
@@ -28,10 +27,7 @@ export default function Progress() {
     };
 
     return (
-        <ScrollView>
             <View>
-                <Text variant="labelLarge" >E-commerce as percentage of total sales from 2017 - 2021 </Text>
-                <Text variant="labelSmall">Progress Chart</Text>
                 <ProgressChart
                     data={data}
                     width={screenWidth}
@@ -44,9 +40,7 @@ export default function Progress() {
                         borderRadius: 16,
                         marginVertical: 8,
                     }}
-
                 />
             </View>
-        </ScrollView>
     )
 }

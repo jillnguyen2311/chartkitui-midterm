@@ -1,26 +1,17 @@
 # Midterm
 
 ## Description
+This mobile app focuses on retail trade e-commerce essentials, offering users valuable insights into the dynamic world of online retail. The app provides data on e-commerce sales as a percentage of total sales from 2017 to 2021, as well as future investment likelihood in the next 12 months. This is crucial for businesses and investors seeking to understand the e-commerce landscape and make informed decisions in this rapidly evolving sector.
 
 ## Data Found
+- [Retail trade, total sales and e-commerce sales](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010006501)
+- [Investments in online sales and e-commerce capabilities over the next 12 months, by business characteristics](https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=3310034501)
 
 ## Open-source charting library used
-
-## Link
-- https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010006501
-- https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3310034501
-
+- [react-native-chart-kit](https://www.npmjs.com/package/react-native-chart-kit)
+- [react-native-paper](https://callstack.github.io/react-native-paper/)
 
 ## run app
+```
 npx expo start
-
-## Safe Areas
-[Installing dependencies into an Expo managed project](https://reactnavigation.org/docs/5.x/getting-started/)
-npm install @react-native-masked-view/masked-view @react-navigation/stack react-native-gesture-handler react-native-safe-area-context react-native-screens
-
-[Installing dependencies into a bare React Native project](https://reactnavigation.org/docs/getting-started/)
-npx expo install react-native-screens react-native-safe-area-context
-
-[Stack Navigator](https://reactnavigation.org/docs/native-stack-navigator/)
-npm install @react-navigation/native-stack
-
+```
